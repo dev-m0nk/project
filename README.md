@@ -1,4 +1,4 @@
-# Project (I have made this file from chatGpt)
+# Project 
 
 This project is an AI-enabled Python tool that processes multi-slide PowerPoint presentations (`.pptx`) to find factual and logical inconsistencies. It analyzes text found directly on the slides, in speaker notes, and within images to identify conflicting data points and calculation errors.
 
@@ -68,6 +68,14 @@ python analyze_deck.py /path/to/your/presentation.pptx
 
 
 
+
+### **Professional Paraphrase**
+
+"Please note the following regarding the current state of this project:
+
+1.  **Hardcoded Logic for Sample Data:** Due to a tight one-day deadline, certain functions have been specifically tailored to work with the provided sample presentation. This was a deliberate choice to ensure a functional deliverable within the timeframe, and I have a clear plan to refactor this logic for universal compatibility.
+2.  **README Generation:** The `README.md` file was drafted with the assistance of an AI tool to ensure comprehensive setup instructions across different operating systems, as my primary development environment is macOS. However, all of the project's Python code is my original work.
+3.  **Future Feature - Timeline Analysis:** The feature for detecting timeline mismatches has not yet been implemented. I am actively researching the best approach for this and would welcome any suggestions on how to effectively extract and compare date-based information from the slides."
 
 
 
