@@ -1,4 +1,4 @@
-# Presentation Inconsistency Checker
+# Project (I have made this file from chatGpt)
 
 This project is an AI-enabled Python tool that processes multi-slide PowerPoint presentations (`.pptx`) to find factual and logical inconsistencies. It analyzes text found directly on the slides, in speaker notes, and within images to identify conflicting data points and calculation errors.
 
