@@ -65,6 +65,7 @@ The script is run from the command line.
 **Basic command:**
 ```bash
 python analyze_deck.py /path/to/your/presentation.pptx
+```
 
 
 
