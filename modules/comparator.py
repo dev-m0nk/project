@@ -1,15 +1,15 @@
-from collections import defaultdict
+from collections import defaultdict                  # used defaultdict do if a ley doesnt exist it still dont give KeyError
 
-def find_inconsistencies(facts, slides, use_llm=False):
+def find_inconsistencies(facts, slides, use_llm=False):       # facts slide and a flag for llm as argument
     inconsistencies = []
-    facts_by_type = defaultdict(list)
+    facts_by_type = defaultdict(list)                        # new dict
 
     for f in facts:
         facts_by_type[f["type"]].append(f)
 
-    for t, items in facts_by_type.items():
+    for t, items in facts_by_type.items():            #inserted in a set.If the set contain more than one value it flag and tells us that multiple data were found for same entry point
         seen_vals = {f["value"] for f in items if isinstance(f["value"], (int, float))}
-        if len(seen_vals) > 1:
+        if len(seen_vals) > 1:    
             inconsistencies.append({
                 "type": f"{t}_mismatch",
                 "items": items,
@@ -28,7 +28,7 @@ def find_inconsistencies(facts, slides, use_llm=False):
             for w in t.split():
                 if w.isdigit():
                     component_hours.append(int(w))
-        if total_hours and sum(component_hours) - total_hours != total_hours:
+        if total_hours and sum(component_hours) - total_hours != total_hours:                # collect all component hours and total hours and check if there is a sum mismatch
             inconsistencies.append({
                 "type": "sum_mismatch",
                 "slide": slide["index"],
