@@ -68,14 +68,12 @@ python analyze_deck.py /path/to/your/presentation.pptx
 
 
 
+---
 
-### **Professional Paraphrase**
+## Developer Notes
 
-"Please note the following regarding the current state of this project:
-
-1.  **Hardcoded Logic for Sample Data:** Due to a tight one-day deadline, certain functions have been specifically tailored to work with the provided sample presentation. This was a deliberate choice to ensure a functional deliverable within the timeframe, and I have a clear plan to refactor this logic for universal compatibility.
-2.  **README Generation:** The `README.md` file was drafted with the assistance of an AI tool to ensure comprehensive setup instructions across different operating systems, as my primary development environment is macOS. However, all of the project's Python code is my original work.
-3.  **Future Feature - Timeline Analysis:** The feature for detecting timeline mismatches has not yet been implemented. I am actively researching the best approach for this and would welcome any suggestions on how to effectively extract and compare date-based information from the slides."
-
+* **Time-Constrained Implementation**: Given the one-day turnaround for this project, some functions were hardcoded to ensure functionality with the provided sample presentation. The immediate next step is to refactor this logic to be universally applicable.
+* **Cross-Platform README**: The setup instructions in this `README.md` were generated with the assistance of an AI tool to ensure they are helpful for both Windows and macOS users. The Python code, however, is entirely original work.
+* **Pending Features**: Timeline mismatch detection is a planned feature that has not yet been implemented. I am currently evaluating the most effective methods for extracting and comparing date-based information.
 
 
