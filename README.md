@@ -71,33 +71,3 @@ python analyze_deck.py /path/to/your/presentation.pptx
 
 
 
-Output Format
-The script generates a report.json file containing the analysis.
-
-summary: A high-level overview of the number of inconsistencies found.
-
-inconsistencies: A list of all detected issues. Each issue is an object with:
-
-type: The type of inconsistency (e.g., currency_mismatch, sum_mismatch).
-
-items or slide: The data points involved in the inconsistency and their context.
-
-explanation: A human-readable description of the issue.
-
-Limitations and Thoughtfulness of Approach
-Hardcoded Sum Check: The sum_mismatch check in comparator.py is currently hardcoded to look for the specific phrase "Hours Saved Per Consultant Monthly". This makes it effective for the sample deck but not generalizable to other presentations with different wording for totals and components. A more robust solution would involve semantic analysis to identify totals and their related parts dynamically.
-
-Numerical Focus: The current version primarily detects numerical inconsistencies. It does not yet analyze or compare textual claims (e.g., "market is highly competitive" vs. "few competitors").
-
-No Timeline Analysis: The tool does not currently extract or compare dates to check for timeline mismatches.
-
-Future Improvements
-LLM Integration: Implement the --llm functionality to use a model like Gemini to detect more nuanced logical and semantic inconsistencies, such as contradictory textual claims and timeline mismatches.
-
-Dynamic Sum Checking: Replace the hardcoded sum-finding logic with a more intelligent system that can identify totals and components regardless of the phrasing used on the slide.
-
-Enhanced Data Normalizers: Add new regular expressions to normalizer.py to identify and standardize more data types, such as dates, addresses, or specific product names.
-
-Configuration File: Allow users to define custom check types or patterns in a config.yaml file to make the tool more adaptable to specific use cases.
-
-Unit Tests: Develop a suite of unit tests with pytest to ensure the reliability and robustness of the extraction, normalization, and comparison logic, especially as new features are added.
