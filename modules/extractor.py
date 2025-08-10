@@ -1,3 +1,5 @@
+# to run ocr .Extract all the images and run ocr on it and then organise all the inforamtion in a structured list
+
 import os
 from pptx import Presentation
 from PIL import Image
@@ -44,3 +46,5 @@ def extract_slide_texts_and_images(pptx_path, use_ocr=False):
         })
 
     return slides_data
+
+
